@@ -1,0 +1,145 @@
+:root {
+    --cible-x : 300px;
+    --cible-y : 300px; /* sample text */
+    --source-x : 220px;
+    --source-y : 220px;
+}
+
+* {
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+.container{
+    background-color: white;
+    border: 1px solid white;
+    width: 1200px; /* hada l 3ard d la page kamla */
+    margin: auto;
+}
+
+/*rgb(198, 255, 182)*/
+
+p[id=one]{
+    font-size: 30px;
+}
+
+.for_player {
+    /*margin: 10px; */
+    width : 180px;
+    height : max-content;
+    background-color: rgb(123, 240, 123);
+    border-right: 1px solid rgb(198, 255, 182);
+    border: 5px inset rgb(153, 83, 25);
+    /*border-radius: 25px;*/
+    padding: 10px;
+    float: left;
+}
+
+.for_game {
+    padding: 10px;
+    /*margin: 10px;*/
+    /*width:65%; /*temporary*/
+    height: max-content;
+    position: relative;
+    margin-left: 10px solid white;
+    border: 5px outset rgb(153, 83, 25);
+    /*border-radius: 25px;*/
+}
+
+p[id=titl] {
+    font-size: 28px;
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+.select-anim{
+    animation: select;
+}
+
+@keyframes select {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(180deg);/* nice, so this will create "infinity" */
+    }
+}
+
+@keyframes move_around{
+    from{
+        top : var(--source-y);
+        left : var(--source-x);
+    }
+    to {
+        top : var(--cible-y);
+        left : var(--cible-x);
+    }
+}
+
+.move_around-anim{
+    animation: move_around;
+}
+
+/* /////////////////////*/
+
+canvas { 
+    border: 2px inset black;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: bisque;
+    position: relative;
+}
+
+/*////////////////////*/
+
+
+.doliprane {
+    background-color: #adadad ;
+    border-radius: 100% ;
+    width: 80px;/*change those as much as u want*/
+    height: 80px;/*no shit happens*/
+    display: flex ;
+    justify-content: center ;
+    align-content: center;/*dis line doesn't so shit*/
+    /*margin-bottom: 5px;*/
+    /*transition: background-color 0s*/
+    position: absolute;
+    left: 387px;/* ~~~ x = ~~~ */
+    top: 302px; /* ~~~ y = ~~~ */
+    /* a.k.a for the canvas : x=200 - y=330 */
+    transform-origin: 50% 50%;
+}
+
+.doliprane:hover [id="crop"]{/*active : turns while u click*/
+    animation: select 2s ease-in-out ;
+
+}
+
+[id="crop"] {
+    width: 9; /* maybe those two */
+	height: 5; /* aren't necessary */
+    border-top: 10px solid rgb(120, 120, 120);
+	border-left: 10px solid rgb(190, 190, 190);
+	border-right: 10px solid rgb(120, 120, 120);
+	border-bottom: 10px solid rgb(209, 209, 209);
+    z-index: 2;
+}
+
+.shading{
+    width: 12px;
+    height: 15px;
+    position: relative;
+    background-color:rgb(245, 223, 189);
+    background-position: 30px;
+    border-radius: 0%;
+    border-top: 10px solid blue;
+    rotate: 120deg;
+    z-index: 2;
+    all: unset;
+}
+
+.who{
+    clear: both;
+}
