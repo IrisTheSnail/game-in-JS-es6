@@ -82,6 +82,8 @@ draw();
 
 //clone wlla create???
 
+var counter = 0;
+
 class Screw {
     constructor(coorx, coory, selected){
 
@@ -90,11 +92,14 @@ class Screw {
         this.selected = selected;
         let node = document.getElementById("ourthing");
         var clone = node.cloneNode(true);
+        counter++;
+        clone.id = 'ourthing' + counter;
 
         document.getElementById("for_shame").appendChild(clone);
-        clone.style.left = coorx;
-        clone.style.top = coory;
+        clone.style.left = coorx + 'px';
+        clone.style.top = coory + 'px';
         this.screw = clone;
+
     }
 
     get coordinates(){
@@ -111,35 +116,56 @@ class Screw {
         this.coory = coory;
         // document.getElementById(this.screw).style.top = coorx;
         // document.getElementById(this.screw).style.left = coory;
-        this.screw.style.top = this.coorx;
-        this.screw.style.left = this.coory;
+        this.screw.style.top = this.coorx + 'px';
+        this.screw.style.left = this.coory + 'px';
     }
 
     set state(new_state){
         this.selected = new_state;
     }
+
     //has -- retruns a boolean: does the attribute exist?
-    move(finalx, finaly) {
-        //moove a screw form a place to another :3
-            //made of : change_coor + animation + 
-            //made of : change_coor + 
-        let rs = getComputedStyle(document.querySelector(':root'));
-        rs.style.setProperty('--cible-x', finalx);
-        rs.style.setProperty('--cible-y', finaly);
-        rs.style.setProperty('--source-x', this.coorx);
-        rs.style.setProperty('--source-y', this.coory);
-        
+
+    move() {
+        var deplace = this.screw;
+        var this_coorx = this.coorx;
+        var this_coory = this.coory;
+        var id = null;
+        clearInterval(id);
+        var finalx = 30;
+        var finaly = 30;
+        id = setInterval(move_(finalx, finaly), 1);
+        function move_(finalx, finaly){
+            if((finalx == this_coorx) && (finaly == this_coory)){
+                clearInterval(id);
+            }else{
+                if(finalx < this_coorx){
+                    this_coorx--;
+                    deplace.style.left = this_coorx+'px';
+                }
+                if(finalx > this_coorx){
+                    this_coorx++;
+                    deplace.style.left = this_coorx+'px';
+                }
+                if(finaly < this_coory){
+                    this_coory--;
+                    deplace.style.top = this_coory+'px';
+                }
+                if(finaly > this_coory){
+                    this_coory++;
+                    deplace.style.top = this_coory+'px';
+                }
+            }
+        }
+
     }
 
 }
 
-var nail = new Screw("1000px", "100px", true);
+var nail = new Screw(500, 100, true);
 
-//nail.change_coor("300px", "300px");
-
-//ratt mossiba = new module_simula();
-
+nail.screw.addEventListener("click", nail.move());
 //-- mechanics --
-// <div class="lol  bar">
-//toogle : kant kayna kay7yydha, makantch, kayssn3ha 
+// <div class="lol bar">
+//toogle : kant kayna kay7yydha, makantch, kayssn3ha
 //dispatchEvent.classList.toggle("foo");

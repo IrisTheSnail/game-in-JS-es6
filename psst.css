@@ -1,15 +1,15 @@
 :root {
-    --cible-x : 300px;
-    --cible-y : 300px; /* sample text */
-    --source-x : 220px;
-    --source-y : 220px;
+    --ciblex : 300px ;
+    --cibley : 300px ; /* sample text */
+    --sourcex : 220px !important;
+    --sourcey : 220px !important;
 }
 
 * {
 	margin:0;
 	padding:0;
 	border:0;
-}
+} 
 
 .container{
     background-color: white;
@@ -69,22 +69,22 @@ p[id=titl] {
 
 @keyframes move_around{
     from{
-        top : var(--source-y);
-        left : var(--source-x);
+        top : var(--sourcey);
+        left : var(--sourcex);
     }
     to {
-        top : var(--cible-y);
-        left : var(--cible-x);
+        top : var(--cibley);
+        left : var(--ciblex);
     }
 }
 
-.move_around-anim{
-    animation: move_around;
+.move_around_anim:active{
+    animation : move_around 2s ease-in-out;
 }
 
 /* /////////////////////*/
 
-canvas { 
+canvas {
     border: 2px inset black;
     margin-left: 20px;
     margin-right: 20px;
@@ -118,8 +118,6 @@ canvas {
 }
 
 [id="crop"] {
-    width: 9; /* maybe those two */
-	height: 5; /* aren't necessary */
     border-top: 10px solid rgb(120, 120, 120);
 	border-left: 10px solid rgb(190, 190, 190);
 	border-right: 10px solid rgb(120, 120, 120);
