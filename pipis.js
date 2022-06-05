@@ -87,7 +87,7 @@ var counter = 0;
 class Screw {
     constructor(coorx, coory, selected){
 
-        this.coorx = coorx;
+        this.coorx = coorx; 
         this.coory = coory;
         this.selected = selected;
         let node = document.getElementById("ourthing");
@@ -99,6 +99,7 @@ class Screw {
         clone.style.left = coorx + 'px';
         clone.style.top = coory + 'px';
         this.screw = clone;
+        clone.style.postion = "absolute";
 
     }
 
@@ -134,7 +135,7 @@ class Screw {
         clearInterval(id);
         var finalx = 30;
         var finaly = 30;
-        id = setInterval(move_(finalx, finaly), 1);
+        id = setInterval(move_(finalx, finaly), 50000);
         function move_(finalx, finaly){
             if((finalx == this_coorx) && (finaly == this_coory)){
                 clearInterval(id);
@@ -157,15 +158,46 @@ class Screw {
                 }
             }
         }
-
     }
-
 }
 
-var nail = new Screw(500, 100, true);
 
-nail.screw.addEventListener("click", nail.move());
 //-- mechanics --
 // <div class="lol bar">
 //toogle : kant kayna kay7yydha, makantch, kayssn3ha
 //dispatchEvent.classList.toggle("foo");
+
+class Entity {
+    constructor(coorx, coory, selected){
+        var newdiv = document.createElement("div"); //mhm hada morbba3
+        newdiv.classList.add("entity");
+        newdiv.style.top = coory + "px";
+        newdiv.style.left = coorx + "px";
+        document.getElementById("for_shame").appendChild(newdiv);
+
+        this.selected = selected; //1 : if pleine, nail - the initial state
+        //2 : if pleine, nail, selected
+        //3 : if empty
+        var crop = document.getElementById("crop");
+        newdiv.classList.add("doliprane");
+        newdiv.appendChild(crop);
+        this.element = newdiv;        
+    }
+
+    change_state(new_state){
+        this.selected = new_state;
+        if(new_state == 2) {
+            this.element.style.backgroundColor = "blue";
+
+        }
+        if(new_state == 3){
+            this.element
+        }
+
+    }
+    
+}
+
+// 1 : 
+var newentity = new Entity(435, 150, 1);
+newentity.change_state()
