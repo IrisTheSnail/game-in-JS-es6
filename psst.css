@@ -112,12 +112,12 @@ canvas {
     transform-origin: 50% 50%;
 }
 
-.doliprane:hover [id="crop"]{/*active : turns while u click*/
+.doliprane:hover .crop{/*active : turns while u click*/
     animation: select 2s ease-in-out ;
-
+    
 }
 
-[id="crop"] {
+.crop {
     border-top: 10px solid rgb(120, 120, 120);
 	border-left: 10px solid rgb(190, 190, 190);
 	border-right: 10px solid rgb(120, 120, 120);

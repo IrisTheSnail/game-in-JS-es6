@@ -178,20 +178,26 @@ class Entity {
         this.selected = selected; //1 : if pleine, nail - the initial state
         //2 : if pleine, nail, selected
         //3 : if empty
-        var crop = document.getElementById("crop");
+        var child = document.createElement("div");
+        child.classList.add("crop");
         newdiv.classList.add("doliprane");
-        newdiv.appendChild(crop);
-        this.element = newdiv;        
+        newdiv.appendChild(child);
+        this.element = newdiv;    
     }
+    //lets not copy stuff, it gets messy, lets create everything from JS
 
     change_state(new_state){
         this.selected = new_state;
         if(new_state == 2) {
-            this.element.style.backgroundColor = "blue";
-
+            this.element.style.backgroundColor = "#e6a312";
+            this.element.firstElementChild.style = "border-top : 10px solid #704700;\n" //hada l mghlo9
+            + "border-right : 10px solid #704700;\n" //hada l mghlo9
+            + "border-left : 10px solid #FDB201;\n" //hada l mfto7
+            + "border-bottom : 10px solid #FDB201"; //hada l mfto7
         }
         if(new_state == 3){
-            this.element
+            this.element.classList.remove("doliprane");
+            this.element.removeChild(this.element.children[0]);
         }
 
     }
@@ -200,4 +206,11 @@ class Entity {
 
 // 1 : 
 var newentity = new Entity(435, 150, 1);
-newentity.change_state()
+var otherentity = new Entity(235, 350, 1);
+newentity.element.addEventListener("click", fct);
+otherentity.element.addEventListener("click", fct2);
+function fct(){
+    
+    newentity.change_state(2);}
+
+function fct2(){otherentity.change_state(3)}
