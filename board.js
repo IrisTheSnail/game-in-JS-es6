@@ -92,6 +92,11 @@ class Board {
    * @return 0 for success, 1 for failure
    */
   move(row, col, direction){
+    if(this.game_state==this.GameState.INITIAL){
+      this.initial_move();
+      return 0;
+    }
+
     if(this.game_state != this.GameState.MIDGAME){
       console.error("move() can only be called after removing a first screw with initial_move()");
       return 1;
@@ -101,7 +106,7 @@ class Board {
       return 1
     }
     
-    if(this._get_relative(row, col, direction) == this.CellState.HOLE){
+    if(this._get_relative(row, col, direction, 1) == this.CellState.HOLE){
       return 1
     }
     
@@ -175,7 +180,7 @@ class Board {
   _place_nail(row, col){
     if(this._check_row_col(row, col))
       return 1;
-   
+  
     if(this.board_state[row][col] == 1)
       console.warn(`_place_nail: Nail already exists at (${row}, ${col})`);
     
@@ -214,7 +219,7 @@ class Board {
    * 
    * @return the value of the cell, or undefined if invalid parameters are given
    */
-  _get_relative(row, col, direction, steps=1){
+  _get_relative(row, col, direction, steps){
     if(this._check_row_col(row, col))
       return undefined;
     

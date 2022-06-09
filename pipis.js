@@ -73,102 +73,10 @@ function draw() {
 
 draw();
 
-// var nodee = document.getElementById("ourthing");
-// var clone = nodee.cloneNode(true);
-
-// document.getElementById("for_shame").appendChild(clone);
-
-// clone.style.top = "600px";
-
-//clone wlla create???
-
-var counter = 0;
-
-class Screw {
-    constructor(coorx, coory, selected){
-
-        this.coorx = coorx; 
-        this.coory = coory;
-        this.selected = selected;
-        let node = document.getElementById("ourthing");
-        var clone = node.cloneNode(true);
-        counter++;
-        clone.id = 'ourthing' + counter;
-
-        document.getElementById("for_shame").appendChild(clone);
-        clone.style.left = coorx + 'px';
-        clone.style.top = coory + 'px';
-        this.screw = clone;
-        clone.style.postion = "absolute";
-
-    }
-
-    get coordinates(){
-        let pair = [this.coorx, this.coory];
-        return pair;
-    }
-
-    get state(){
-        return this.selected;
-    }
-
-    change_coor(coorx, coory){
-        this.coorx = coorx;
-        this.coory = coory;
-        // document.getElementById(this.screw).style.top = coorx;
-        // document.getElementById(this.screw).style.left = coory;
-        this.screw.style.top = this.coorx + 'px';
-        this.screw.style.left = this.coory + 'px';
-    }
-
-    set state(new_state){
-        this.selected = new_state;
-    }
-
-    //has -- retruns a boolean: does the attribute exist?
-
-    move() {
-        var deplace = this.screw;
-        var this_coorx = this.coorx;
-        var this_coory = this.coory;
-        var id = null;
-        clearInterval(id);
-        var finalx = 30;
-        var finaly = 30;
-        id = setInterval(move_(finalx, finaly), 50000);
-        function move_(finalx, finaly){
-            if((finalx == this_coorx) && (finaly == this_coory)){
-                clearInterval(id);
-            }else{
-                if(finalx < this_coorx){
-                    this_coorx--;
-                    deplace.style.left = this_coorx+'px';
-                }
-                if(finalx > this_coorx){
-                    this_coorx++;
-                    deplace.style.left = this_coorx+'px';
-                }
-                if(finaly < this_coory){
-                    this_coory--;
-                    deplace.style.top = this_coory+'px';
-                }
-                if(finaly > this_coory){
-                    this_coory++;
-                    deplace.style.top = this_coory+'px';
-                }
-            }
-        }
-    }
-}
-
-
-//-- mechanics --
-// <div class="lol bar">
-//toogle : kant kayna kay7yydha, makantch, kayssn3ha
-//dispatchEvent.classList.toggle("foo");
-
 class Entity {
     constructor(coorx, coory, selected){
+        this.coorx = coorx;
+        this.coory = coory;
         var newdiv = document.createElement("div"); //mhm hada morbba3
         newdiv.classList.add("entity");
         newdiv.style.top = coory + "px";
@@ -182,7 +90,9 @@ class Entity {
         child.classList.add("crop");
         newdiv.classList.add("doliprane");
         newdiv.appendChild(child);
-        this.element = newdiv;    
+        this.element = newdiv;  
+        newdiv.addEventListener("click", () => {this._concrete_move();});
+        return this;
     }
     //lets not copy stuff, it gets messy, lets create everything from JS
 
@@ -194,23 +104,86 @@ class Entity {
             + "border-right : 10px solid #704700;\n" //hada l mghlo9
             + "border-left : 10px solid #FDB201;\n" //hada l mfto7
             + "border-bottom : 10px solid #FDB201"; //hada l mfto7
+            console.log("seeeelected");
+            return 0;
         }
         if(new_state == 3){
             this.element.classList.remove("doliprane");
             this.element.removeChild(this.element.children[0]);
+            console.log("eeeeeerased");
+            return 0; 
         }
-
+        return 1;
     }
     
+    /* @private
+    */
+    _concrete_move(){
+        console.log(this);
+        if(bord.game_state == bord.GameState.INITIAL){
+            this.change_state(3);
+            let abstract = mapping(this.coorx, this.coory);
+            bord.initial_move(abstract[0], abstract[1]);
+            return 0;
+        }
+
+        if(bord.game_state == bord.GameState.MIDGAME){
+            
+        }
+        return 1;
+    }
 }
 
-// 1 : 
-var newentity = new Entity(435, 150, 1);
-var otherentity = new Entity(235, 350, 1);
-newentity.element.addEventListener("click", fct);
-otherentity.element.addEventListener("click", fct2);
-function fct(){
-    
-    newentity.change_state(2);}
 
-function fct2(){otherentity.change_state(3)}
+/* you give this function a pair in theory, it give you the equivalent pair in pixels
+ * and vice versa
+ * 
+ */
+function mapping(x, y){ //x : row|left //y : column|top
+    if(y>x) console.log("ya 9lbtihoum ya rak ghalt ga3 f chi w7da");
+    
+    if(x<5 && y<5 && x>=0 && y>=0){
+        if(x==0&&y==0) return [487, 92];
+        if(x==1&&y==0) return [437, 197];
+        if(x==1&&y==1) return [537, 197];
+        if(x==2&&y==0) return [387, 302];
+        if(x==2&&y==1) return [487, 302];
+        if(x==2&&y==2) return [587, 302];
+        if(x==3&&y==0) return [337, 407];
+        if(x==3&&y==1) return [437, 407];
+        if(x==3&&y==2) return [537, 407];
+        if(x==3&&y==3) return [637, 407];
+        if(x==4&&y==0) return [287, 512];
+        if(x==4&&y==1) return [387, 512];
+        if(x==4&&y==2) return [487, 512];
+        if(x==4&&y==3) return [587, 512];
+        if(x==4&&y==4) return [687, 512];
+    }
+
+    if(x>=287 && x<=687 && y>=92 && y<=512){
+        if(x==487 && y==92) return [0, 0];
+        if(x==437 && y==197) return [1, 0];
+        if(x==537 && y==197) return [1, 1];
+        if(x==387 && y==302) return [2, 0];
+        if(x==487 && y==302) return [2, 1];
+        if(x==587 && y==302) return [2, 2];
+        if(x==337 && y==407) return [3, 0];
+        if(x==437 && y==407) return [3, 1];
+        if(x==537 && y==407) return [3, 2];
+        if(x==637 && y==407) return [3, 3];
+        if(x==287 && y==512) return [4, 0];
+        if(x==387 && y==512) return [4, 1];
+        if(x==487 && y==512) return [4, 2];
+        if(x==587 && y==512) return [4, 3];
+        if(x==687 && y==512) return [4, 4];
+    }
+
+}
+
+/* It should do the css move, cheking on the whole board, uses Board.move
+ * and other stuff
+ * @param   
+ *
+ */
+
+
