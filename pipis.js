@@ -73,7 +73,13 @@ function draw() {
 
 draw();
 
-class Entity {
+var sth_selected = 0; //boolean to see if sth is selected in the board;
+var coor_of_selected;   //coordinated of selected nail if one is selected, 
+                        //is undefined when nothing is selected
+var direction = 0; //the theoretical direction explianed in the comments in board.js 
+
+
+class Entity {    
     constructor(coorx, coory, selected){
         this.coorx = coorx;
         this.coory = coory;
@@ -97,6 +103,7 @@ class Entity {
     //lets not copy stuff, it gets messy, lets create everything from JS
 
     change_state(new_state){
+        sth_selected = 1;
         this.selected = new_state;
         if(new_state == 2) {
             this.element.style.backgroundColor = "#e6a312";
@@ -111,7 +118,8 @@ class Entity {
             this.element.classList.remove("doliprane");
             this.element.removeChild(this.element.children[0]);
             console.log("eeeeeerased");
-            return 0; 
+            sth_selected = 0;
+            return 0;
         }
         return 1;
     }
@@ -119,7 +127,6 @@ class Entity {
     /* @private
     */
     _concrete_move(){
-        console.log(this);
         if(bord.game_state == bord.GameState.INITIAL){
             this.change_state(3);
             let abstract = mapping(this.coorx, this.coory);
@@ -128,9 +135,46 @@ class Entity {
         }
 
         if(bord.game_state == bord.GameState.MIDGAME){
+            //is there anything selected in that damned bord??
             
+            if(sth_selected == 0){
+                this.change_state(2); //affects sth_selected
+                console.log("yeeee midgaaaaame and nothing is selected");
+                coor_of_selected = mapping(this.coorx, this.coory);
+            }else{
+                let abstract = mapping(this.coorx, this.coory);
+
+                //diffrerence == the_clicked hole MINUS the_selected(in yellow)
+                console.log(abstract, coor_of_selected);
+                
+                let difference = [abstract[0] - coor_of_selected[0], abstract[1] - coor_of_selected[1]];
+                console.log(difference);
+                if(difference[0] == 0 && difference[1] == 2) {direction = 1;}
+                if(difference[0] == 0 && difference[1] == -2) {direction = -1;}
+                if(difference[0] == 2 && difference[1] == 0) {direction = 2;}
+                if(difference[0] == -2 && difference[1] == 0) {direction = -2;}
+                if(difference[0] == 2 && difference[1] == 2) {direction = 3;}
+                if(difference[0] == -2 && difference[1] == -2) {
+                    console.log("direction = -3");
+                    direction = -3;
+                }
+                
+                console.log(direction);
+                bord.move(coor_of_selected[0], coor_of_selected[1], direction);
+                //now the update...
+                
+            }
         }
         return 1;
+    }
+
+    update(){
+        
+        for(let i = 0; i < 5; i++){
+            for(let j = 0; j < 5-i+1; j++){
+                let dis = mapping(this.coorx, this.coory);
+                if()
+            }
     }
 }
 

@@ -110,8 +110,8 @@ class Board {
       return 1
     }
     
-    this._set_relative(row, col, direction, this.CellState.NAIL, 2)
-    this._set_relative(row, col, direction, this.CellState.HOLE, 1)
+    this._set_relative(row, col, direction, this.CellState.NAIL, 2);
+    this._set_relative(row, col, direction, this.CellState.HOLE, 1);
     this._remove_nail(row, col);
     
     this.log_state();
@@ -215,6 +215,13 @@ class Board {
    * @param row        The row of the origin cell
    * @param col        The column of the origin cell
    * @param direction  The direction (algebraic measure)
+   *         -3 \     / -2
+   *             \   /  
+   *              \ /                  O
+   *    -1 <-------nail------> 1           those are the values the var direction can take.
+   *              / \                  O 
+   *             /   \
+   *          2 /     \ 3 
    * @param steps      The number of steps in that direction
    * 
    * @return the value of the cell, or undefined if invalid parameters are given
@@ -251,12 +258,19 @@ class Board {
    * @param row        The row of the origin cell
    * @param col        The column of the origin cell
    * @param direction  The direction (algebraic measure)
+   *         -3 \     / -2
+   *             \   /  
+   *              \ /                  O
+   *    -1 <-------nail------> 1           those are the values the var direction can take.
+   *              / \                  O 
+   *             /   \
+   *          2 /     \ 3 
    * @param value      The new cell value
    * @param steps      The number of steps in that direction
    * 
    * @return 0 for success, 1 for failure
    */
-  _set_relative(row, col, direction, value, steps=1){
+  _set_relative(row, col, direction, value, steps){
     if(this._check_row_col(row, col))
       return 1;
     
