@@ -105,6 +105,12 @@ class Entity {
     change_state(new_state){
         sth_selected = 1;
         this.selected = new_state;
+
+        if(new_state) {
+            this.element.classList.add("doliprane");
+            this.element.firstElementChild.style = "display : block";
+        }
+
         if(new_state == 2) {
             this.element.style.backgroundColor = "#e6a312";
             this.element.firstElementChild.style = "border-top : 10px solid #704700;\n" //hada l mghlo9
@@ -116,7 +122,8 @@ class Entity {
         }
         if(new_state == 3){
             this.element.classList.remove("doliprane");
-            this.element.removeChild(this.element.children[0]);
+            //this.element.removeChild(this.element.children[0]);
+            this.element.firstElementChild.style = "display : none";
             console.log("eeeeeerased");
             sth_selected = 0;
             return 0;
@@ -149,11 +156,26 @@ class Entity {
                 
                 let difference = [abstract[0] - coor_of_selected[0], abstract[1] - coor_of_selected[1]];
                 console.log(difference);
-                if(difference[0] == 0 && difference[1] == 2) {direction = 1;}
-                if(difference[0] == 0 && difference[1] == -2) {direction = -1;}
-                if(difference[0] == 2 && difference[1] == 0) {direction = 2;}
-                if(difference[0] == -2 && difference[1] == 0) {direction = -2;}
-                if(difference[0] == 2 && difference[1] == 2) {direction = 3;}
+                if(difference[0] == 0 && difference[1] == 2) {
+                    console.log("direction = 1");
+                    direction = 1;
+                }
+                if(difference[0] == 0 && difference[1] == -2) {
+                    console.log("direction = -1");
+                    direction = -1;
+                }
+                if(difference[0] == 2 && difference[1] == 0) {
+                    console.log("direction = 2");
+                    direction = 2;
+                }
+                if(difference[0] == -2 && difference[1] == 0) {
+                    console.log("direction = -2");
+                    direction = -2;
+                }
+                if(difference[0] == 2 && difference[1] == 2) {
+                    console.log("direction = 3");
+                    direction = 3;
+                }
                 if(difference[0] == -2 && difference[1] == -2) {
                     console.log("direction = -3");
                     direction = -3;
@@ -161,31 +183,41 @@ class Entity {
                 
                 console.log(direction);
                 bord.move(coor_of_selected[0], coor_of_selected[1], direction);
-                //now the update...
+                update();
                 
             }
         }
         return 1;
     }
 
-    update(){
-        
-        for(let i = 0; i < 5; i++){
-            for(let j = 0; j < 5-i+1; j++){
-                let dis = mapping(this.coorx, this.coory);
-                if()
-            }
-    }
+
 }
 
+function update(){    
+    for(let i = 0; i < 5; i++){
+        for(let j = 0; j < i+1; j++){
+            //let dis = mapping(this.coorx, this.coory);
+            if(bord.board_state[i][j] == 1){
+                console.log("should become nail");
+                console.log(concrete_bord[i][j]);
+                //concrete_bord[i][j].change_state(1);
+            }else{
+                console.log("should become empty");
+                concrete_bord[i][j].change_state(3);
+            }
+        }
+    }
+}
 
 /* you give this function a pair in theory, it give you the equivalent pair in pixels
  * and vice versa
  * 
  */
 function mapping(x, y){ //x : row|left //y : column|top
-    if(y>x) console.log("ya 9lbtihoum ya rak ghalt ga3 f chi w7da");
-    
+    if(y>x){
+        console.log("x = " , x , "y = " , y);
+        console.log("ya 9lbtihoum ya rak ghalt ga3 f chi w7da");
+    }
     if(x<5 && y<5 && x>=0 && y>=0){
         if(x==0&&y==0) return [487, 92];
         if(x==1&&y==0) return [437, 197];
