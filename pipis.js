@@ -108,6 +108,7 @@ class Entity {
 
         if(new_state) {
             this.element.classList.add("doliprane");
+            
             this.element.firstElementChild.style = "display : block";
         }
 
@@ -122,10 +123,12 @@ class Entity {
         }
         if(new_state == 3){
             this.element.classList.remove("doliprane");
+            
             //this.element.removeChild(this.element.children[0]);
             this.element.firstElementChild.style = "display : none";
-            console.log("eeeeeerased");
+            console.log("333333rased");
             sth_selected = 0;
+            
             return 0;
         }
         return 1;
@@ -199,11 +202,14 @@ function update(){
             //let dis = mapping(this.coorx, this.coory);
             if(bord.board_state[i][j] == 1){
                 console.log("should become nail");
-                console.log(concrete_bord[i][j]);
-                //concrete_bord[i][j].change_state(1);
+                console.log(i, j);
+                concrete_bord[i][j].change_state(1);
+                sth_selected = 0;
             }else{
                 console.log("should become empty");
+                console.log(i, j);
                 concrete_bord[i][j].change_state(3);
+                sth_selected = 0;
             }
         }
     }

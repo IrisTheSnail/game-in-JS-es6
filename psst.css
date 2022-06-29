@@ -102,13 +102,7 @@ canvas {
     height: 80px;/*no shit happens*/
     display: flex ;
     justify-content: center ;
-    align-content: center;/*dis line doesn't so shit*/
-    /*margin-bottom: 5px;*/
-    /*transition: background-color 0s*/
     position: absolute;
-    /*left: 387px;/* ~~~ x = ~~~ */
-    /*top: 302px; /* ~~~ y = ~~~ */
-    /* a.k.a for the canvas : x=200 - y=330 */
     transform-origin: 50% 50%;
 }
 
@@ -143,10 +137,6 @@ canvas {
 }
 
 .entity {
-    border-top : 10px black;
-    border-bottom: 10px black;
-    border-left : 10px black;
-    border-right: 10px black;
     position : absolute;
     width : 80px;
     height : 80px;
