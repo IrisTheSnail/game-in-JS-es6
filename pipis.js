@@ -108,12 +108,13 @@ class Entity {
 
         if(new_state) {
             this.element.classList.add("doliprane");
-            
+            this.element.classList.remove("selected");
             this.element.firstElementChild.style = "display : block";
         }
 
         if(new_state == 2) {
-            this.element.style.backgroundColor = "#e6a312";
+            //this.element.style.backgroundColor = "#e6a312 !important;\n"; //#e6a312
+            this.element.classList.add("selected");
             this.element.firstElementChild.style = "border-top : 10px solid #704700;\n" //hada l mghlo9
             + "border-right : 10px solid #704700;\n" //hada l mghlo9
             + "border-left : 10px solid #FDB201;\n" //hada l mfto7
@@ -123,9 +124,10 @@ class Entity {
         }
         if(new_state == 3){
             this.element.classList.remove("doliprane");
-            
-            //this.element.removeChild(this.element.children[0]);
-            this.element.firstElementChild.style = "display : none";
+            this.element.classList.remove("selected");
+
+            this.element.firstElementChild.style = "display : none;\n" 
+            + "background-color : null;\n";
             console.log("333333rased");
             sth_selected = 0;
             
@@ -162,32 +164,40 @@ class Entity {
                 if(difference[0] == 0 && difference[1] == 2) {
                     console.log("direction = 1");
                     direction = 1;
+                    bord.move(coor_of_selected[0], coor_of_selected[1], direction);
+                    update();
                 }
                 if(difference[0] == 0 && difference[1] == -2) {
                     console.log("direction = -1");
                     direction = -1;
+                    bord.move(coor_of_selected[0], coor_of_selected[1], direction);
+                    update();
                 }
                 if(difference[0] == 2 && difference[1] == 0) {
                     console.log("direction = 2");
                     direction = 2;
+                    bord.move(coor_of_selected[0], coor_of_selected[1], direction);
+                    update();
                 }
                 if(difference[0] == -2 && difference[1] == 0) {
                     console.log("direction = -2");
                     direction = -2;
+                    bord.move(coor_of_selected[0], coor_of_selected[1], direction);
+                    update();
                 }
                 if(difference[0] == 2 && difference[1] == 2) {
                     console.log("direction = 3");
                     direction = 3;
+                    bord.move(coor_of_selected[0], coor_of_selected[1], direction);
+                    update();
                 }
                 if(difference[0] == -2 && difference[1] == -2) {
                     console.log("direction = -3");
                     direction = -3;
+                    bord.move(coor_of_selected[0], coor_of_selected[1], direction);
+                    update();
                 }
-                
-                console.log(direction);
-                bord.move(coor_of_selected[0], coor_of_selected[1], direction);
                 update();
-                
             }
         }
         return 1;

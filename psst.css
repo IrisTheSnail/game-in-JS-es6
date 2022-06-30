@@ -119,6 +119,10 @@ canvas {
     z-index: 2;
 }
 
+.selected{
+    background-color: #e6a312 !important;;
+}
+
 .shading{
     width: 12px;
     height: 15px;
