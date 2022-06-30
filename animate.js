@@ -9,7 +9,7 @@ var coor;
  */
 
 var abstract;
-
+var fail_counter = 0;
 
 var i=0 , j=0;
 var newentity;
@@ -25,8 +25,19 @@ var concrete_bord = bord.board_state.map(
         return str;
     });
 
-element = document.getElementById("reset_button");
-element.addEventListener("click", function() {
-    document.getElementById("reset_button").innerHTML = "Hello World";
-    console.log("how to ruin ");
-});
+document.addEventListener('keydown', (event) => {
+    var name = event.key;
+    var code = event.code;
+    // Alert the key name and key code on keydown
+    if(name === "r"){
+        console.log(`Key pressed ${name} \t Key code value: ${code}`);
+        bord._reset();
+        update();
+        fail_counter++;
+        if(fail_counter == 1){
+            document.getElementById('count').innerHTML = "You resetted " + fail_counter.toString() + " time.";
+        }else{
+            document.getElementById('count').innerHTML = "You resetted " + fail_counter.toString() + " times."; 
+        }
+    }
+    }, false);

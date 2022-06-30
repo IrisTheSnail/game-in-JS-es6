@@ -25,13 +25,11 @@ p[id=one]{
 }
 
 .for_player {
-    /*margin: 10px; */
     width : 180px;
     height : max-content;
     background-color: rgb(123, 240, 123);
     border-right: 1px solid rgb(198, 255, 182);
     border: 5px inset rgb(153, 83, 25);
-    /*border-radius: 25px;*/
     padding: 10px;
     float: left;
 }
@@ -147,13 +145,14 @@ canvas {
     z-index : 5;
 }
 
-.button {
-    background-color: #4CAF50; /* Green */
+#button {
+    margin-top: 20px;
+    line-height: 60px;
+    font-weight: bold;
+    padding: 0 40px;
+    background: salmon;
     border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-  }
+}
+#button:hover {
+    background: lightsalmon;
+}
