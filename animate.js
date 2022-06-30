@@ -25,3 +25,8 @@ var concrete_bord = bord.board_state.map(
         return str;
     });
 
+element = document.getElementById("reset_button");
+element.addEventListener("click", function() {
+    document.getElementById("reset_button").innerHTML = "Hello World";
+    console.log("how to ruin ");
+});
