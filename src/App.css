@@ -1,0 +1,75 @@
+body {
+    padding-top: 50px;
+}
+
+.navBar{
+    background-color:/* #FFE7CC#E1CEB5*/#083AA9; /*#002E94*/
+    width : 100vw; /*39l 39l*/
+    height : 50px;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+
+
+}
+
+.header{
+    display : flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 30px; /*lass9 dyal flex - yachouti*/
+    /*had l blan dyal gap kayn ta f l grid*/
+
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.headings{
+    width: 120px;
+    height: 75%;
+    text-align: center;
+    background-color: #FFE7CC;
+    border-radius: 2px;
+    color : black;
+    display: flex;
+    justify-content: center;
+    /*font-family: 2rem;*/
+    align-items: center;
+
+}
+
+.git {
+    margin-right: 50px;
+}
+
+.headings:hover{
+    cursor: pointer;
+}
+
+.links{
+    padding-top : 10px;
+}
+
+a {
+    text-decoration: none; /*9ra 9ra*/
+}
+
+.burger {
+    display : none;
+}
+
+.khobz {
+    width : 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin : 1px;
+}
+
+@media screen and (max-width: 768px) {
+    body{display: none;}
+}
+
+* {
+    font-family:'Times New Roman', Times, serif
+}
