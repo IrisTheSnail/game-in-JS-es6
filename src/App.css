@@ -69,11 +69,11 @@ a {
     background-color: rgb(226, 226, 226);
     margin : 1px;
 }
-/*
-@media screen and (max-width: 768px) {
-    body{display: none;}
+
+@media (max-width: 768px) {
+    .mii{flex-wrap: wrap;}
 }
-*/
+
 * {
     font-family:'Times New Roman', Times, serif
 }
@@ -84,24 +84,25 @@ a {
     width : 70%;
     align-content: center;
     flex-direction: row;
-    flex-wrap: wrap;
+    
     position :relative;
     
 }
 
 
 .mi {
+    align-self: center;
     width : 350px;
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
     background-color: #e6e6e6;
-
+    align-self:flex-start;
+    border: 1px solid black;
 }
 
 .txt {
     text-align: left;    
     align-items: center;
+    padding : 20px;
 }
 
 #txt1 {
@@ -110,11 +111,27 @@ a {
 
 .cv {
     display: block;
+    left : 50%;
     
 }
 
 .center{
-    width : 100%;
+    width : 50%;
+
     margin: auto;
-    width: 50%;
+    margin-top: 50px;
+}
+
+#texte{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    min-width: 350px;
+    height: 350px;
+
+}
+
+h2 {
+    text-decoration: underline;
+    padding: 
 }
