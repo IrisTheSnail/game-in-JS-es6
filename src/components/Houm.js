@@ -1,3 +1,5 @@
+import './style/Houm.css';
+
 export default function Houm(){
     var w = window.innerWidth;
     if(w >= 617){
