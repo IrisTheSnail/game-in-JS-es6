@@ -18,22 +18,22 @@ body {
 .header{
     display : flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     /***gap: 30px;***/                  /*lass9 dyal flex - yachouti*/
     /*had l blan dyal gap kayn ta f l grid*/
 
     align-items: center;
     width: 100%;
     height: 100%;
-    border-bottom: 1px solid black;
+    border-bottom: 5px solid rgb(66, 66, 66);
 }
 
 .headings{
-    width: 150px;
+    width: 250px;
     height: 100%;
     text-align: center;
     background-color: #c5c5c5;
-    border-left : 1px solid black;
+    
     border-right : 1px solid black;
     color : black;
     display: flex;
@@ -44,7 +44,7 @@ body {
 }
 
 .git {
-    margin-right: 1px;
+    margin-right: -1px;
 }
 
 .headings:hover{
@@ -59,32 +59,15 @@ a {
     text-decoration: none; /*9ra 9ra*/
 }
 
-.burger {
-    display : none;
-}
-
-.khobz {
-    width : 25px;
-    height: 3px;
-    background-color: rgb(226, 226, 226);
-    margin : 1px;
-}
-
-@media (max-width: 768px) {
-    .mii{flex-wrap: wrap;}
-}
-
 * {
     font-family:'Times New Roman', Times, serif
 }
-
+/*
 .mii {
     justify-content: center;
     display: flex;
-    width : 70%;
+    width : 90%;
     align-content: center;
-    flex-direction: row;
-    
     position :relative;
     
 }
@@ -94,15 +77,17 @@ a {
     align-self: center;
     width : 350px;
     flex-grow: 1;
-    background-color: #e6e6e6;
+    background-color: inherit;
     align-self:flex-start;
-    border: 1px solid black;
+    
 }
 
 .txt {
     text-align: left;    
     align-items: center;
     padding : 20px;
+    
+
 }
 
 #txt1 {
@@ -112,12 +97,14 @@ a {
 .cv {
     display: block;
     left : 50%;
-    
+    border : 3px double rgb(70, 47, 29);
+    border-radius: 100%;
+    margin-left : 100px;
+    margin-right: 70px;
 }
 
 .center{
     width : 50%;
-
     margin: auto;
     margin-top: 50px;
 }
@@ -126,12 +113,44 @@ a {
     display: flex;
     flex-direction: column;
     max-width: 600px;
-    min-width: 350px;
     height: 350px;
 
 }
 
 h2 {
     text-decoration: underline;
-    padding: 
+    align-self: center;
+}
+*/
+
+.mii {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    margin-top: 50px;
+    margin-left: 40px;
+    gap : 30px;
+    
+}
+
+.cv {
+    width : 310px;
+}
+
+.mii2 {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    margin-top: 50px;
+    margin-left: 10px;
+    gap : 30px;
+
+    
+}
+
+.cv2 {
+    width : 300px;
+}
+
+.txt2 {
+    margin-right : 20px;
+    margin-left: 10px;
 }
