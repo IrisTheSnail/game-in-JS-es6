@@ -1,12 +1,13 @@
 body {
-    padding-top: 50px;
+    padding-top: 100px;
 
 }
 
 a {
-    text-decoration: none; /*9ra 9ra*/
+    text-decoration: none; 
 }
 
 * {
     font-family:'Times New Roman', Times, serif
 }
+
