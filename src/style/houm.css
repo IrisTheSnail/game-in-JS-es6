@@ -1,0 +1,31 @@
+.mii {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    margin-top: 50px;
+    margin-left: 40px;
+    gap : 30px;
+    
+}
+
+.cv {
+    width : 310px;
+}
+
+.mii2 {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    margin-top: 50px;
+    margin-left: 10px;
+    gap : 30px;
+
+    
+}
+
+.cv2 {
+    width : 300px;
+}
+
+.txt2 {
+    margin-right : 20px;
+    margin-left: 10px;
+}

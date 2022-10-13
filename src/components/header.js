@@ -1,5 +1,3 @@
-import './style/header.css';
-
 export default function Header(){
     return (<div className="navBar">
                 <div className="header">
