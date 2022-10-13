@@ -11,14 +11,14 @@ export default function Houm(){
                         coo coo coo coo
                     </div>
                 </div>
-                <img className="mi cv" src="mi.png" alt="mi"></img>
+                
             </div>
-        );
+        );//<img className="mi cv" src="mi.png" alt="mi"></img>
         
     }else { //2 : we re on a tablet or a cellphone
         return(
             <div className="mii2" id="coo2">
-                <img className="mi2 cv2" src="mi.png" alt="mi"></img>
+                
                 <div className="mi2" id="texte2">
                     <h1 className="txt2">Welcome to my website!</h1>
                     <div className="txt2">
@@ -28,6 +28,6 @@ export default function Houm(){
                     </div>
                 </div>
             </div>
-        );
+        );//<img className="mi2 cv2" src="mi.png" alt="mi"></img>
     }
 }

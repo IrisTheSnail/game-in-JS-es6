@@ -1,7 +1,7 @@
 .navBar{
     background-color:/* #FFE7CC#E1CEB5*/#c5c5c5; /*#002E94*/
     width : 100vw; /*39l 39l*/
-    height : 80px;
+    height : 120px;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
@@ -13,7 +13,7 @@
     display : flex;
     flex-direction: row;
     justify-content: center;
-    /***gap: 30px;***/                  /*lass9 dyal flex - yachouti*/
+    /***gap: 30px;***/                  
     /*had l blan dyal gap kayn ta f l grid*/
     align-items: center;
     width: 100%;
@@ -22,7 +22,7 @@
 }
 
 .headings{
-    width: 250px;
+    width: 20% ;
     height: 100%;
     text-align: center;
     background-color: #c5c5c5;
@@ -38,6 +38,13 @@
 
 .git {
     margin-right: -1px;
+    background-color: rgb(71, 58, 58);
+    color : bisque;
+    border: 1px solid #474747;
+    border-radius: 4px;
+    margin: 8px;
+    padding: 4px;
+
 }
 
 .headings:hover{
@@ -48,3 +55,7 @@
     padding-top : 10px;
 }
 
+.last_one {
+    display: flex;
+    flex-direction: column;
+}
