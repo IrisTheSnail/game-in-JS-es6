@@ -4,8 +4,8 @@ export default function Houm(){
         return(
             <div className="mii" id="coo">
                 <div className="mi" id="texte">
-                    <h1 className="txt" id="txt1">Welcome to my website!</h1>
-                    <div className="txt" id="txt2">
+                    <h1 className="txt welcome">Welcome to my website!</h1>
+                    <div className="txt who">
 
                         coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo
                         coo coo coo coo
@@ -20,8 +20,8 @@ export default function Houm(){
             <div className="mii2" id="coo2">
                 <img className="mi2 cv2" src="mi.png" alt="mi"></img>
                 <div className="mi2" id="texte2">
-                    <h1 className="txt2">Welcome to my website!</h1>
-                    <div className="txt2">
+                    <h1 className="txt2 welcome2">Welcome to my website!</h1>
+                    <div className="txt2 who2">
 
                         coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo
                         coo coo coo coo

@@ -1,13 +1,10 @@
 body {
     padding-top: 100px;
-
+    font-family : 'Ubuntu', sans-serif;
 }
 
 a {
     text-decoration: none; 
 }
 
-* {
-    font-family:'Times New Roman', Times, serif
-}
 

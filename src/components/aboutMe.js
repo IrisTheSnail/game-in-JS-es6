@@ -1,13 +1,18 @@
 
 export default function About(){
     return(
-        <div className="txtabt"> 
-        <h1 id="path">About Me</h1>
-        <div> bla bla bla about my life (prepa, ensias, parascolaire...) 
-            coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo
-            coo coo coo coo
+        <div className="about"> 
+        <h1 id="whoami">Who am I?</h1>
+        <div className="balance">
+            <div className="path">My path : 
+                <div> prepa l3ibat
+                coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo coo
+                        coo coo coo coo 
+                </div>
+            </div>
+            <div className="separator"></div>
+            <div className="hobbies"> Hobbies and interests :</div>
         </div>
-        <h2>hobbies</h2>
         </div>
     );
 }

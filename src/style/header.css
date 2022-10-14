@@ -36,6 +36,10 @@
 
 }
 
+@media screen and (max-width: 400px) {
+    .kl3 {display: none;}
+  }
+
 .git {
     margin-right: -1px;
     background-color: rgb(71, 58, 58);
