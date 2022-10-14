@@ -1,3 +1,7 @@
+#whoami {
+    margin : 10px;
+}
+
 .txtabt {
     margin: 40px;
 }
@@ -12,7 +16,13 @@
     padding : 20px;
     border: 3px solid rgb(49, 49, 49);
     border-radius: 4px;
-    background-color: rgb(252, 252, 252);
+    background-color: rgb(221, 205, 174);
+    border-left : 10px solid rgb(49, 49, 49);
+    border-bottom : 10px solid rgb(49, 49, 49);
+    border-block-start-color: rgb(156, 114, 0);
+    border-right-color: rgb(156, 114, 0);
+    
+
 }
 
 .path {
@@ -23,8 +33,8 @@
 }
 
 .separator {
-    background-color: rgba(211, 170, 170, 0.623);
-    border: 1.5px solid rgb(20, 20, 20);
+    background-color: rgb(145, 125, 72);
+    
     border-radius : 10%;
     width : 10px;
     height : auto;
