@@ -11,7 +11,7 @@ export default function Houm(){
                         coo coo coo coo
                     </div>
                 </div>
-                <img className="mi cv" src="mi.png" alt="mi"></img>
+                <img className="mi cv" src="mi.png" alt="mi"></img>    
             </div>
         );//<img className="mi cv" src="mi.png" alt="mi"></img>
         

@@ -14,16 +14,16 @@ export default function Header(){
                     <i className="kl3 fa-terminal fas"></i>
                     &ensp; Projects</a>
                     
-                    <div className="headings last_one">
-                        <a className="git" role="button" href="https://github.com/IrisTheSnail">
-                            <i className="kl3 fas fa-code-branch"></i>
-                            &ensp; github
-                        </a>
-                        <a className="git" role="button" href="https://drive.google.com/file/d/1VD-Xbra7JtLILpjRI4Ddg2Ge3i60Q_fC/view?usp=sharing">
-                            <i className="kl3 fa-file-lines far"/>
-                            &ensp; resume
-                        </a>
-                    </div>
+                    <a className="headings" role="button" href="https://drive.google.com/file/d/1VD-Xbra7JtLILpjRI4Ddg2Ge3i60Q_fC/view?usp=sharing">
+                        <i className="kl3 fa-file-lines far"/>
+                        &ensp; resume
+                    </a>
+
+                    <a className="headings" role="button" href="https://github.com/IrisTheSnail">
+                        <i className="kl3 fas fa-code-branch"></i>
+                        &ensp; github
+                    </a>
+
                 </div>
             </div>
     );
