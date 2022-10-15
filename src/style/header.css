@@ -1,7 +1,7 @@
 .navBar{
     background-color:/* #FFE7CC#E1CEB5*/#c5c5c5; /*#002E94*/
-    width : 100vw; /*39l 39l*/
-    height : 100px;
+    width : 70vw; /*39l 39l*/
+    height : 50px;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
@@ -63,3 +63,4 @@
     display: flex;
     flex-direction: column;
 }
+

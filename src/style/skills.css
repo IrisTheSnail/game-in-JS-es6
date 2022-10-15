@@ -43,7 +43,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction : row;
-    overflow:hidden;
+    
 }
 
 .ref {
@@ -53,4 +53,9 @@
     padding-top : 13px;
     padding-bottom : 13px;
     border : 2px solid rgb(136, 136, 136);
+}
+
+.foo {
+    width : auto;
+    height :auto;
 }
