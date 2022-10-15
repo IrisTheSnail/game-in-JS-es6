@@ -46,6 +46,12 @@ export default function Skills(){
                     <div className="bone"></div> 
                     <div className="ref">Django</div>
                 </div>
+
+                <div className="chri7a">
+                <i className="fa fa-brands fa-java"></i>
+                    <div className="bone"></div> 
+                    <div className="ref">Java</div>
+                </div>
             </div>
         </>
     );
