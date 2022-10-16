@@ -39,6 +39,10 @@
     
 }
 
+.svg_help {
+    padding : none
+}
+
 .skillflex {
     display: flex;
     flex-wrap: wrap;

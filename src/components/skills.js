@@ -1,3 +1,5 @@
+import Flutter from "../images/flutter";
+
 export default function Skills(){
     return(
         <>
@@ -51,6 +53,12 @@ export default function Skills(){
                 <i className="fa fa-brands fa-java"></i>
                     <div className="bone"></div> 
                     <div className="ref">Java</div>
+                </div>
+
+                <div className="chri7a">
+                    <div className="fa svg_help"><Flutter></Flutter></div>
+                    <div className="bone"></div> 
+                    <div className="ref">Flutter</div>
                 </div>
             </div>
         </>
