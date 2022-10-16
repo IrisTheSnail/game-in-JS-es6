@@ -1,5 +1,8 @@
 import Flutter from "../images/flutter";
 import Spring from "../images/spring";
+import Mongo from "../images/mongo";
+import Firebase from "../images/Firebase";
+import Bash from "../images/bash";
 
 export default function Skills(){
     return(
@@ -66,6 +69,43 @@ export default function Skills(){
                     <div className="fa"><Flutter></Flutter></div>
                     <div className="bone"></div> 
                     <div className="ref">Flutter</div>
+                </div>
+
+                <div className="chri7a">
+                    <i className="fa fa-database fas"></i>
+                    <div className="bone"></div> 
+                    <div className="ref">PL/SQL</div>
+                </div>
+
+                <div className="chri7a">
+                    <div className="fa"><Mongo></Mongo></div>
+                    <div className="bone"></div> 
+                    <div className="ref">MongoDB</div>
+                </div>
+
+
+                <div className="chri7a">
+                    <div className="fa"><Firebase></Firebase></div>
+                    <div className="bone"></div> 
+                    <div className="ref">Firebase</div>
+                </div>
+
+                <div className="chri7a">
+                    <div className="fa fa-linux fab"></div>
+                    <div className="bone"></div> 
+                    <div className="ref">Linux</div>
+                </div>
+
+                <div className="chri7a">
+                    <div className="fa"><Bash></Bash></div>
+                    <div className="bone"></div> 
+                    <div className="ref">Bash</div>
+                </div>
+
+                <div className="chri7a">
+                    <i className="fa fa-git-alt	fab"></i>
+                    <div className="bone"></div> 
+                    <div className="ref">Git</div>
                 </div>
             </div>
         </>
