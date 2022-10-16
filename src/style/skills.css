@@ -40,7 +40,8 @@
 }
 
 .svg_help {
-    padding : none
+    
+    display: center;
 }
 
 .skillflex {

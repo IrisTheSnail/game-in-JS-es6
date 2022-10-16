@@ -1,4 +1,5 @@
 import Flutter from "../images/flutter";
+import Spring from "../images/spring";
 
 export default function Skills(){
     return(
@@ -56,7 +57,13 @@ export default function Skills(){
                 </div>
 
                 <div className="chri7a">
-                    <div className="fa svg_help"><Flutter></Flutter></div>
+                <div className="fa"><Spring></Spring></div>
+                    <div className="bone"></div> 
+                    <div className="ref">Spring</div>
+                </div>
+
+                <div className="chri7a">
+                    <div className="fa"><Flutter></Flutter></div>
                     <div className="bone"></div> 
                     <div className="ref">Flutter</div>
                 </div>
