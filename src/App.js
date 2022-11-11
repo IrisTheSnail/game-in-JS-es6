@@ -20,6 +20,7 @@ export default function App() {
       <About></About>
       <Skills></Skills>
       <Projects></Projects>
+      
     </>
   );
 }
