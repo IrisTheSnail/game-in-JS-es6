@@ -1,6 +1,22 @@
+.ccc {
+    justify-content: center;
+}
+
 .tmra {
     display: flex;
     flex-direction: column;
     margin : 10px;
     align-items: center;
+    border: 5px solid rgb(68, 68, 68);
+    border-radius: 5px;
+    padding : 10px;
+}
+
+.proj-title  {
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.fortran {
 }
