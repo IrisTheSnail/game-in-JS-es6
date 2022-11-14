@@ -1,0 +1,6 @@
+.tmra {
+    display: flex;
+    flex-direction: column;
+    margin : 10px;
+    align-items: center;
+}

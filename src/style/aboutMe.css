@@ -45,6 +45,11 @@
     padding-bottom: 10px;
 }
 
+.bb {
+    font-size : 17px;
+    font-weight : 900;
+}
+
 @media screen and (max-width: 540px) {
     .balance {
         display: grid;
