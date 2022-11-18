@@ -1,5 +1,5 @@
 #puzzle
-##HOW MANY TIME YOU WILL HAVE TO RESET THE PUZZLE BOARD?
+##HOW MANY TIMES YOU WILL HAVE TO RESET THE PUZZLE BOARD?
 
 Rules : 
 
@@ -11,7 +11,7 @@ then, you keep removing nails but accoding to a rule.
 
 You can make a nail "jump" above another into a hole, in any direction you choose (expect vertically).
 
-![alt text](https://github.com/IrisTheSnail/game-in-JS-es6/blob/master/demo/1.jpg?raw=true)
+![alt text](https://github.com/IrisTheSnail/game-in-JS-es6/blob/master/demo/1.jpg?)
 ![alt text](https://github.com/IrisTheSnail/game-in-JS-es6/blob/master/demo/2.jpg?raw=true)
 ![alt text](https://github.com/IrisTheSnail/game-in-JS-es6/blob/master/demo/3.jpg?raw=true)
 ![alt text](https://github.com/IrisTheSnail/game-in-JS-es6/blob/master/demo/4.jpg?raw=true)
