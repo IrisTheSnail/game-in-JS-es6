@@ -1,5 +1,5 @@
-#puzzle
-##HOW MANY TIMES YOU WILL HAVE TO RESET THE PUZZLE BOARD?
+# puzzle
+## HOW MANY TIMES YOU WILL HAVE TO RESET THE PUZZLE BOARD?
 
 ![alt text](https://github.com/IrisTheSnail/game-in-JS-es6/blob/master/demo/demo.png?raw=true)
 
