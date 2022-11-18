@@ -17,8 +17,7 @@ Diagonal move :
 ![alt text](https://github.com/IrisTheSnail/game-in-JS-es6/blob/master/demo/1.png?raw=true) ===> ![alt text](https://github.com/IrisTheSnail/game-in-JS-es6/blob/master/demo/2.png?raw=true) ===> ![alt text](https://github.com/IrisTheSnail/game-in-JS-es6/blob/master/demo/3.png?raw=true)
 
 Horizontal move : 
-![alt text](https://github.com/IrisTheSnail/game-in-JS-es6/blob/master/demo/4.png?raw=true)
-![alt text](https://github.com/IrisTheSnail/game-in-JS-es6/blob/master/demo/5.png?raw=true)
+![alt text](https://github.com/IrisTheSnail/game-in-JS-es6/blob/master/demo/4.png?raw=true) ===> ![alt text](https://github.com/IrisTheSnail/game-in-JS-es6/blob/master/demo/5.png?raw=true)
 
 You have to play along using the move described above.
 
