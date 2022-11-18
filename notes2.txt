@@ -1,0 +1,8 @@
+we can think of a function that associates any figure drawn by paint (for example) with a polygon....
+
+<area ...
+an object that represents the a zone in an image that you can click, it can have functionalities, and yes JS is involved, though you can declare one using only the html tag <area
+
+mlawi
+klinix
+indomie
